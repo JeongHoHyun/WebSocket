@@ -1,10 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <title>회원가입 페이지</title>
+    <script type="text/javascript" src="/js/user.js"></script>
 </head>
 <body>
-
+<h1>회원가입</h1>
+<form id="register_form" action="#" th:action="@{/user/register}" method="post">
+    <div>
+        <label for="user_id">ID :</label>
+        <input type="text" id="user_id" name="user_id">
+        <input type="hidden" id="duplication_check" value="N">
+        <button type="button" onclick="userFunction.duplication_check()">중복체크</button>
+        <span id="duplication_check_message">중복체크를 해주세요</span>
+    </div>
+    <div>
+        <label for="user_pw">Password :</label>
+        <input type="password" id="user_pw" name="user_pw">
+    </div>
+    <div>
+        <label for="user_name">Name :</label>
+        <input type="text" id="user_name" name="user_name">
+    </div>
+    <div>
+        <button type="button" onclick="userFunction.register_user()">register</button>
+    </div>
+</form>
 </body>
 </html>

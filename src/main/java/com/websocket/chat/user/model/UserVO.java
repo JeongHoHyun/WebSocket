@@ -9,8 +9,9 @@ import lombok.Setter;
 @AllArgsConstructor
 public class UserVO {
     private Long user_idx;
-    private String id;
-    private String pw;
+    private String user_id;
+    private String user_pw;
+    private String user_name;
     private String reg_date;
     private String status;
 }

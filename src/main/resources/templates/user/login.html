@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Login Page</title>
+    <title>로그인 페이지</title>
 </head>
 <body>
-<h1>Login</h1>
+<h1>로그인</h1>
 <form action="#" th:action="@{/user/login}" method="post">
     <div>
-        <label for="id">Username:</label>
-        <input type="text" id="id" name="id">
+        <label for="user_id">ID :</label>
+        <input type="text" id="user_id" name="user_id">
     </div>
     <div>
-        <label for="pw">Password:</label>
-        <input type="password" id="pw" name="pw">
+        <label for="user_pw">Password :</label>
+        <input type="password" id="user_pw" name="user_pw">
     </div>
     <div>
-        <button type="submit">Login</button>
+        <button type="submit">로그인</button>
     </div>
 </form>
 </body>
